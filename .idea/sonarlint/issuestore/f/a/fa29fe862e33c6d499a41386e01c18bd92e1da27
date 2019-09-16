@@ -1,0 +1,4 @@
+
+Ë%squid:RedundantThrowsDeclarationCheck"Remove the declaration of thrown exception 'com.fasterxml.jackson.core.JsonProcessingException' which is a subclass of 'java.io.IOException'.(ä•·Ìúÿÿÿÿ8ÁÁÅ“Ò-
+[squid:S1854"8Remove this useless assignment to local variable "date".(ÈÃõüÿÿÿÿ8ÁäÒ“Ò-
+Lsquid:S1481")Remove this unused "date" local variable.(ÈÃõüÿÿÿÿ8ÁäÒ“Ò-

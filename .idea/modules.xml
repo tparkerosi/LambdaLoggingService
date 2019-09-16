@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LoggingFunction.iml" filepath="$PROJECT_DIR$/.idea/modules/LoggingFunction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LoggingFunction.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LoggingFunction.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LoggingFunction.test.iml" filepath="$PROJECT_DIR$/.idea/modules/LoggingFunction.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cwds-logging-service.iml" filepath="$PROJECT_DIR$/cwds-logging-service.iml" />
+    </modules>
+  </component>
+</project>

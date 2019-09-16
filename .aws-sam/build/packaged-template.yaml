@@ -1,0 +1,47 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: 'AWS
+
+  Sample SAM Template for AWS
+
+  '
+Globals:
+  Function:
+    Timeout: 20
+Outputs:
+  LoggingApi:
+    Description: API Gateway endpoint URL for Prod stage for logging function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/log/
+  LoggingFunction:
+    Description: Logging Lambda Function ARN
+    Value:
+      Fn::GetAtt:
+      - HelloWorldFunction
+      - Arn
+  LoggingFunctionIamRole:
+    Description: Implicit IAM Role created for Logging function
+    Value:
+      Fn::GetAtt:
+      - HelloWorldFunctionRole
+      - Arn
+Resources:
+  HelloWorldFunction:
+    Properties:
+      CodeUri: s3://tparker-deployments/cd9f80d72940d5e243c07796fd7506d2
+      Environment:
+        Variables:
+          RDS_DB_NAME: cwds
+          RDS_HOSTNAME: lambdamysqltest1.c8zbqdyep91h.us-east-1.rds.amazonaws.com:3006
+          RDS_PASSWORD: iZ6Iz9LX68lfi0t
+          RDS_USERNAME: admin
+      Events:
+        HelloWorld:
+          Properties:
+            Method: get
+            Path: /log
+          Type: Api
+      Handler: logging.App::handleRequest
+      MemorySize: 512
+      Runtime: java8
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31
