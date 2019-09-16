@@ -1,4 +1,4 @@
-#Sample AWS Lambda Logging Application
+# Sample AWS Lambda Logging Application
 
 This project contains a function that acts as a logging service. 
 The application takes an event and stores it in the database, which can be reported on via a reporting service. 
